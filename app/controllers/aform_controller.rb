@@ -1,0 +1,2 @@
+class AformController < ApplicationController
+end
