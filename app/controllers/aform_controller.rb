@@ -4,17 +4,17 @@ class AformController < ApplicationController
 
 	def create
 
-		@somestuff = Aform.new(theparams)
+		@somestuff = Aform.new(params.require(:aform).permit(:))
 
 		@somestuff.save
 		redirect_to @somestuff
 	end	
 
 
-	private
-    	def theparams
-    	params.require(:aform).permit(:text)
-  	end
+	# private
+ #    	def theparams
+ #    	params.require(:aform).permit(:text)
+ #  	end
 
 end
  
